@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Chimpanzee 🐒🎂</title>
+
+    <link rel="stylesheet" href="script.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating decorations -->
+    <div class="floating">
+        <span>✨</span>
+        <span>💗</span>
+        <span>⭐</span>
+        <span>🎀</span>
+        <span>💜</span>
+    </div>
+
+
+    <!-- =========================
+         PAGE 1
+    ========================== -->
+
+    <main class="page active" id="page1">
+
+        <div class="girl">
+            <div class="hair">〰️〰️</div>
+            <div class="girl-face">👧🏻</div>
+        </div>
+
+        <div class="content">
+
+            <span class="mini-title">
+                🔐 CLASSIFIED BIRTHDAY PROJECT
+            </span>
+
+            <h1>
+                Hey Chimpanzee... 🐒
+            </h1>
+
+            <p>
+                Someone has prepared a little surprise for you.
+            </p>
+
+            <p class="small">
+                But unfortunately... you can't just open it. 😌
+            </p>
+
+            <button class="primary-btn" onclick="startGame()">
+                I'm Ready 👀
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         QUESTION PAGE
+    ========================== -->
+
+    <main class="page" id="questionPage">
+
+        <div class="game-card">
+
+            <div class="progress">
+                <span id="questionNumber">Question 1 / 3</span>
+
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+
+
+            <div class="girl-small">
+                👧🏻
+            </div>
+
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+
+            <div id="answers" class="answers"></div>
+
+
+            <p id="reaction" class="reaction"></p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         BIRTHDAY MESSAGE
+    ========================== -->
+
+    <main class="page" id="birthdayPage">
+
+        <div class="birthday-card">
+
+            <span class="mini-title">
+                🎂 YOU MADE IT!
+            </span>
+
+            <h1>
+                HAPPIEST BIRTHDAY,
+                <span>CHIMPANZEE!</span> 🐒🎂
+            
+            </h1>
+
+
+            <div class="letter">
+
+                <p>
+                    <b>
+                        Budhape ki taraf ek aur kadam successfully
+                        complete kar liya tumne. 😭😂
+                    </b>
+                </p>
+
+                <p>
+                    Aur honestly, tumhe dekh ke lagta hai ki
+                    normal hona tumhare syllabus mein hai hi nahi. 🤨🐒
+                </p>
+
+                <p>
+                    Waise tumhare secrets ka kya hi kehna...
+                    <br>
+                    itni security toh NASA bhi nahi rakhta hoga. 😂
+                </p>
+
+                <p>
+                    Lekin ek secret toh tumse galti se nikal hi gaya tha 👀
+                </p>
+
+
+                <div class="formula">
+                    <b>A</b>
+                    <b>A</b>
+                    <span>+</span>
+                    <b>Ru</b>
+                    <span>=</span>
+                    <strong>Aaru</strong>
+                </div>
+
+
+                <p>
+                    Ab ye mat bolna ki ye sab coincidence tha.
+                    <br>
+                    Hum itne bhi innocent nahi hain. 😭😂
+                </p>
+
+
+                <div class="classified">
+
+                    <p>
+                        “Ru” toh galti se reveal ho gaya tha,
+                    </p>
+
+                    <p>
+                        <b>
+                            baaki poori kahani abhi bhi classified hai kya,
+                            Chimpanzee? 🤨🐒😂
+                        </b>
+                    </p>
+
+                </div>
+
+
+                <div class="bhabhi">
+
+                    <span>👀</span>
+
+                    <h3>
+                        Bhabhi Ji ka official update
+                        kab aa raha hai? 😭😂
+                    </h3>
+
+                    <p>
+                        Ya uske liye bhi security clearance lena padega? 🤨
+                    </p>
+
+                </div>
+
+
+                <p>
+                    Anyway,
+                    <b>Happiest Birthday once again!</b> 🎂✨
+                </p>
+
+                <h3 class="last-line">
+                    Aaj full enjoy karo...
+                    aur thoda kam suspicious rehna. 😂🐒
+                </h3>
+
+            </div>
+
+
+            <button class="primary-btn" onclick="showFinal()">
+                Wait... There's One More Thing 👀
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FINAL PAGE
+    ========================== -->
+
+    <main class="page final-page" id="finalPage">
+
+        <div class="final-girl">
+            👧🏻🎀
+        </div>
+
+
+        <div class="final-content">
+
+            <span class="mini-title">
+                ✨ FINAL MESSAGE ✨
+            </span>
+
+            <h1>
+                You actually thought
+                <br>
+                that was the end? 😭
+            </h1>
+
+            <p>
+                Nice try, Chimpanzee😁. 🐒
+            </p>
+
+
+            <div class="final-tease">
+
+                <p>
+                    Waise ek chhoti si baat...
+                </p>
+
+                <h2>
+                    AA + Ru = ?
+                </h2>
+
+                <button class="reveal-btn" onclick="revealAaru()">
+                    Reveal 👀
+                </button>
+
+                <div id="aaru" class="aaru">
+                    AARU 😌😂
+                </div>
+                
+
+            </div>
+            <button
+    class="primary-btn"
+    onclick="showSecretPage()"
+>
+    One Last Secret 🔐
+</button>
+
+            <p class="final-message">
+                Bas. Ab sach mein khatam. 😂
+                <br>
+                <b>Happy Birthday once again! 🎂💗</b>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Confetti container -->
+    <div id="confetti"></div>
+    <!-- SECRET REVEAL PAGE -->
+
+<main class="page" id="secretPage">
+
+    <div class="secret-box">
+
+        <div class="secret-icon">
+            🔐
+        </div>
+
+        <span class="mini-title">
+            ONE LAST SECRET
+        </span>
+
+        <h1>
+            Okay Chimpanzee... 👀
+        </h1>
+
+        <p>
+         Birthday surprise khatam hone se pehle
+            ek last question ka answer dena padega. 😌
+        </p>
+
+        <h2>
+            Batao... tumhare mind mein abhi kya chal raha hai? 🤨
+
+           <p><i>  Batao🤨 tumhara secret kya hai? 
+             mtlb ki aesa jo tum mujhe sach mai batana chahoge 😁 aaj sb chhut h kuch jo v h bol do mai kux nhi bolungi</p></i>
+        </h2>
+        
+        <h3><i> chaho to kuch v bol skte ho aaj bindas 😁</i></h3>
+
+        <form id="secretForm">
+
+            <input
+                type="text"
+                id="secretAnswer"
+                name="secret_answer"
+                placeholder="Type your answer..."
+                autocomplete="off"
+                required
+            >
+
+            <button
+                type="submit"
+                class="primary-btn"
+                id="secretSubmit"
+            >
+                Submit 🔐
+            </button>
+
+        </form>
+
+        <p id="secretReaction"></p>
+
+    </div>
+
+</main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #19152f;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    min-height: 100vh;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+}
+
+.page.active {
+    display: flex;
+
+    animation: pageIn 0.7s ease;
+}
+
+
+/* =========================
+   PAGE 1
+========================= */
+
+#page1 {
+    background:
+        radial-gradient(circle at 20% 30%, #5d4b9d, transparent 30%),
+        radial-gradient(circle at 80% 70%, #a43e76, transparent 30%),
+        #19152f;
+
+    gap: 70px;
+}
+
+
+.content {
+    max-width: 650px;
+    text-align: center;
+}
+
+
+.mini-title {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #ff9fc7;
+}
+
+
+h1 {
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 0.95;
+
+    margin: 20px 0;
+}
+
+
+.content p {
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+.content .small {
+    font-size: 15px;
+
+    opacity: 0.7;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   GIRL
+========================= */
+
+.girl {
+    width: 230px;
+    height: 320px;
+
+    position: relative;
+
+    animation: float 3s infinite ease-in-out;
+}
+
+
+.girl-face {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: #ffd8c9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 115px;
+
+    position: absolute;
+
+    top: 70px;
+    left: 30px;
+
+    border: 4px solid #593649;
+}
+
+
+.girl::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    background: #4b2e32;
+
+    border-radius: 45% 55% 50% 50%;
+
+    top: 45px;
+    left: 20px;
+
+    z-index: -1;
+}
+
+
+.girl::after {
+    content: "🎀";
+
+    position: absolute;
+
+    font-size: 50px;
+
+    top: 20px;
+    right: 15px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.reveal-btn {
+
+    border: none;
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    margin-top: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #ff629f,
+        #ff91bd
+    );
+
+    color: white;
+
+    font-family: "Poppins";
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.primary-btn:hover,
+.reveal-btn:hover {
+
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 15px 35px rgba(255, 100, 160, 0.3);
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+#questionPage {
+
+    background:
+        radial-gradient(circle at 50% 0%, #4f397e, transparent 40%),
+        #19152f;
+}
+
+
+.game-card {
+
+    width: min(700px, 100%);
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.3);
+}
+
+
+.progress {
+
+    text-align: left;
+
+    font-size: 13px;
+
+    color: #ff9fc7;
+}
+
+
+.progress-bar {
+
+    height: 6px;
+
+    background: rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+}
+
+
+#progress {
+
+    height: 100%;
+
+    width: 33%;
+
+    background: #ff77ae;
+
+    transition: 0.5s;
+}
+
+
+.girl-small {
+
+    font-size: 90px;
+
+    margin: 25px;
+
+    animation: float 3s infinite ease-in-out;
+}
+
+
+.game-card h2 {
+
+    font-family: "Baloo 2";
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+}
+
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.answer {
+
+    padding: 17px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+
+.answer:hover {
+
+    background: rgba(255,120,180,0.25);
+
+    transform: translateY(-3px);
+}
+
+
+.reaction {
+
+    min-height: 30px;
+
+    margin-top: 20px;
+
+    color: #ffb4d1;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   BIRTHDAY PAGE
+========================= */
+
+#birthdayPage {
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd5e7, transparent 25%),
+        radial-gradient(circle at 80% 80%, #d7c7ff, transparent 25%),
+        #fff5fa;
+
+    color: #30223c;
+}
+
+
+.birthday-card {
+
+    max-width: 850px;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 55px;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 80px rgba(70,30,70,0.18);
+
+    border: 2px dashed #ff9ac3;
+}
+
+
+.birthday-card h1 {
+
+    font-size: clamp(38px, 6vw, 65px);
+}
+
+
+.birthday-card h1 span {
+
+    color: #e84b88;
+}
+
+
+.letter {
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+.letter p {
+
+    margin: 18px 0;
+}
+
+
+/* formula */
+
+.formula {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    margin: 30px auto;
+
+    width: fit-content;
+
+    background: #ffe5f0;
+
+    border-radius: 20px;
+
+    font-family: "Baloo 2";
+
+    font-size: 32px;
+}
+
+
+.formula strong {
+
+    color: #e84682;
+}
+
+
+.classified {
+
+    padding: 20px;
+
+    background: #fff1f7;
+
+    border-left: 5px solid #ff70aa;
+
+    border-radius: 12px;
+}
+
+
+.bhabhi {
+
+    text-align: center;
+
+    margin: 30px 0;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f7,
+        #f0e8ff
+    );
+}
+
+
+.bhabhi span {
+
+    font-size: 40px;
+}
+
+
+.bhabhi h3 {
+
+    font-family: "Baloo 2";
+
+    font-size: 27px;
+}
+
+
+.last-line {
+
+    text-align: center;
+
+    color: #e84682;
+
+    font-family: "Baloo 2";
+}
+
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-page {
+
+    background:
+        radial-gradient(circle at 50% 20%, #814c9e, transparent 40%),
+        #17132e;
+
+    text-align: center;
+}
+
+
+.final-content {
+
+    max-width: 700px;
+}
+
+
+.final-girl {
+
+    font-size: 130px;
+
+    animation: girlDance 1.5s infinite alternate;
+}
+
+
+.final-content h1 {
+
+    font-size: clamp(40px, 6vw, 65px);
+}
+
+
+.final-content > p {
+
+    font-size: 18px;
+
+    opacity: 0.8;
+}
+
+
+.final-tease {
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+
+.final-tease h2 {
+
+    font-family: "Baloo 2";
+
+    font-size: 45px;
+
+    margin-top: 15px;
+}
+
+
+.aaru {
+
+    display: none;
+
+    font-family: "Baloo 2";
+
+    font-size: 70px;
+
+    color: #ff82b7;
+
+    margin-top: 25px;
+
+    animation: pop 0.7s ease;
+}
+
+
+.aaru.show {
+
+    display: block;
+}
+
+
+.final-message {
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   FLOATING
+========================= */
+
+.floating span {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    animation: float 5s infinite ease-in-out;
+
+    z-index: 10;
+}
+
+
+.floating span:nth-child(1) {
+    top: 15%;
+    left: 8%;
+}
+
+
+.floating span:nth-child(2) {
+    top: 70%;
+    left: 15%;
+}
+
+
+.floating span:nth-child(3) {
+    top: 25%;
+    right: 10%;
+}
+
+
+.floating span:nth-child(4) {
+    top: 75%;
+    right: 15%;
+}
+
+
+.floating span:nth-child(5) {
+    top: 50%;
+    right: 5%;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti-piece {
+
+    position: fixed;
+
+    width: 10px;
+    height: 10px;
+
+    top: -20px;
+
+    z-index: 9999;
+
+    animation: fall 3s linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+@keyframes pop {
+
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes girlDance {
+
+    from {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    to {
+        transform: rotate(5deg) translateY(-10px);
+    }
+}
+
+
+@keyframes fall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+    #page1 {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .girl {
+        transform: scale(0.75);
+    }
+
+    .game-card,
+    .birthday-card {
+        padding: 30px 20px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .birthday-card h1 {
+        font-size: 42px;
+    }
+
+    .final-girl {
+        font-size: 90px;
+    }
+
+}
